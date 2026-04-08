@@ -21,6 +21,32 @@
 
 </div>
 
+## Quick Deploy
+
+### Recommended: full TrustLoop experience
+
+Install the TrustLoop plugin package:
+
+```bash
+openclaw plugins install clawhub:openclaw-trustloop
+```
+
+After install:
+
+- restart Gateway or restart OpenClaw so plugin changes are loaded
+- start a new session
+- TrustLoop is ready with the bundled `skill-evolver` skill and the native `skill_manage_managed` tool
+
+### Standalone fallback: skill-only
+
+If you want to try the workflow without the native managed-skill tool, install the skill directly:
+
+```bash
+openclaw skills install trustloop-skill-evolver
+```
+
+This path is useful for quick evaluation, but the plugin-backed install is the recommended setup.
+
 ## At A Glance
 
 - Quietly learns repeatable workflows instead of interrupting every successful task.

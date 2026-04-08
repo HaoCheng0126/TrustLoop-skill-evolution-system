@@ -21,6 +21,32 @@
 
 </div>
 
+## 快速部署
+
+### 推荐：完整 TrustLoop 体验
+
+直接安装 TrustLoop plugin：
+
+```bash
+openclaw plugins install clawhub:openclaw-trustloop
+```
+
+安装完成后：
+
+- 重启 Gateway 或重开 OpenClaw，让插件变更生效
+- 开一个新的会话
+- 这时就能同时拿到内置的 `skill-evolver` skill 和原生 `skill_manage_managed` 工具
+
+### 兼容模式：只安装 skill
+
+如果你只是想先体验工作流，而不依赖原生 managed-skill 工具，也可以直接安装 skill：
+
+```bash
+openclaw skills install trustloop-skill-evolver
+```
+
+这条路径适合快速试用，但如果你想拿到更完整、更稳定的能力，还是推荐安装 plugin 版本。
+
 ## 一眼看懂
 
 - 它会安静地学习，而不是每完成一次任务都来打断用户。
