@@ -9,11 +9,17 @@
 
 Most self-improving agent demos optimize for autonomy. TrustLoop optimizes for trust.
 
-TrustLoop helps your agent get better without becoming harder to trust.
+Make your AI more capable without making it harder to trust.
 
-It is a review-first skill evolution system for OpenClaw. It captures useful workflows from real work, turns them into managed skill candidates, and lets your team decide what should be kept, revised, published, or rolled back inside clear workspace-only safety boundaries.
+TrustLoop is not trying to answer "Can an agent learn?" It is answering the harder question: "Will a team still trust that agent after it starts changing?"
 
-Teach your agent how your team works. Let it improve over time. Never give up the final say.
+It is a review-first skill evolution system for OpenClaw. It captures useful workflows from real work, turns them into managed skill candidates, and makes approval, revision, publishing, and rollback part of one controlled, explainable team workflow.
+
+You are not giving an agent more freedom to drift. You are giving your team a safer way to let AI improve over time.
+
+- Learn from proven work, not toy demos
+- Review every evolution before it becomes behavior
+- Keep every new capability traceable, reversible, and team-safe
 
 ## Quick Deploy
 
