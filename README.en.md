@@ -1,25 +1,29 @@
+<div align="center">
+
 # TrustLoop
 
-[简体中文](./README.md)
+<p><a href="./README.md">简体中文</a></p>
 
-![OpenClaw](https://img.shields.io/badge/OpenClaw-Build%20on%20Top-0F172A?style=for-the-badge)
-![Review First](https://img.shields.io/badge/Review-First-2563EB?style=for-the-badge)
-![Human in the Loop](https://img.shields.io/badge/Human-In%20the%20Loop-059669?style=for-the-badge)
-![Rollback Ready](https://img.shields.io/badge/Rollback-Ready-F59E0B?style=for-the-badge)
+<p>
+  <img src="https://img.shields.io/badge/OpenClaw-Build%20on%20Top-0F172A?style=for-the-badge" alt="OpenClaw" />
+  <img src="https://img.shields.io/badge/Review-First-2563EB?style=for-the-badge" alt="Review First" />
+  <img src="https://img.shields.io/badge/Human-In%20the%20Loop-059669?style=for-the-badge" alt="Human in the Loop" />
+  <img src="https://img.shields.io/badge/Rollback-Ready-F59E0B?style=for-the-badge" alt="Rollback Ready" />
+</p>
 
-Most self-improving agent demos optimize for autonomy. TrustLoop optimizes for trust.
+<p>Most self-improving agent demos optimize for autonomy. TrustLoop optimizes for trust.</p>
 
-Make your AI more capable without making it harder to trust.
+<h3>Make your AI more capable without making it harder to trust.</h3>
 
-TrustLoop is not trying to answer "Can an agent learn?" It is answering the harder question: "Will a team still trust that agent after it starts changing?"
+<p>TrustLoop is not trying to answer "Can an agent learn?" It is answering the harder question: "Will a team still trust that agent after it starts changing?"</p>
 
-It is a review-first skill evolution system for OpenClaw. It captures useful workflows from real work, turns them into managed skill candidates, and makes approval, revision, publishing, and rollback part of one controlled, explainable team workflow.
+<p>It is a review-first skill evolution system for OpenClaw. It captures useful workflows from real work, turns them into managed skill candidates, and makes approval, revision, publishing, and rollback part of one controlled, explainable team workflow.</p>
 
-You are not giving an agent more freedom to drift. You are giving your team a safer way to let AI improve over time.
+<p>You are not giving an agent more freedom to drift. You are giving your team a safer way to let AI improve over time.</p>
 
-- Learn from proven work, not toy demos
-- Review every evolution before it becomes behavior
-- Keep every new capability traceable, reversible, and team-safe
+<p><strong>Learn from proven work</strong> · <strong>Review every evolution before it becomes behavior</strong> · <strong>Keep every new capability traceable, reversible, and team-safe</strong></p>
+
+</div>
 
 ## Quick Deploy
 

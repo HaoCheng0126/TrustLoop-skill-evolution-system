@@ -1,23 +1,25 @@
+<div align="center">
+
 # TrustLoop Core (`skill-evolver`)
 
-[中文说明](./README.zh-CN.md)
+<p><a href="./README.zh-CN.md">中文说明</a></p>
 
-![OpenClaw Skill](https://img.shields.io/badge/OpenClaw-Skill-0F172A?style=for-the-badge)
-![Review First](https://img.shields.io/badge/Review-First-2563EB?style=for-the-badge)
-![Workspace Only](https://img.shields.io/badge/Scope-Workspace%20Only-059669?style=for-the-badge)
-![Managed Skills](https://img.shields.io/badge/Skills-Managed-F59E0B?style=for-the-badge)
+<p>
+  <img src="https://img.shields.io/badge/OpenClaw-Skill-0F172A?style=for-the-badge" alt="OpenClaw Skill" />
+  <img src="https://img.shields.io/badge/Review-First-2563EB?style=for-the-badge" alt="Review First" />
+  <img src="https://img.shields.io/badge/Scope-Workspace%20Only-059669?style=for-the-badge" alt="Workspace Only" />
+  <img src="https://img.shields.io/badge/Skills-Managed-F59E0B?style=for-the-badge" alt="Managed Skills" />
+</p>
 
-Most self-improving agent demos optimize for autonomy. `skill-evolver` optimizes for trust.
+<p>Most self-improving agent demos optimize for autonomy. <code>skill-evolver</code> optimizes for trust.</p>
 
-`skill-evolver` is the core TrustLoop skill for OpenClaw.
+<h3>Teach your agent once. Review what it learns. Keep the final say.</h3>
 
-It watches for repeatable workflows, turns them into **managed skill candidates**, lets the user **review, revise, approve, or reject** them, and evolves through **manual, assisted, or autonomous** modes with clear safety boundaries.
+<p><code>skill-evolver</code> is the core TrustLoop skill for OpenClaw. It watches for repeatable workflows, turns them into <strong>managed skill candidates</strong>, lets the user <strong>review, revise, approve, or reject</strong> them, and evolves through <strong>manual, assisted, or autonomous</strong> modes with clear safety boundaries.</p>
 
-This is not "auto-modify everything and hope for the best".
+<p>This is not "auto-modify everything and hope for the best". It is <strong>review-first skill evolution</strong> for real users who need trust, visibility, and rollback.</p>
 
-This is **review-first skill evolution** designed for real users, with optional autonomy only where the risk stays low.
-
-Teach your agent once. Review what it learns. Keep the final say.
+</div>
 
 ## At A Glance
 

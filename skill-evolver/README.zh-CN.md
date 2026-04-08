@@ -1,23 +1,25 @@
+<div align="center">
+
 # TrustLoop Core (`skill-evolver`)
 
-[English](./README.md)
+<p><a href="./README.md">English</a></p>
 
-![OpenClaw Skill](https://img.shields.io/badge/OpenClaw-Skill-0F172A?style=for-the-badge)
-![审核优先](https://img.shields.io/badge/审核优先-2563EB?style=for-the-badge)
-![工作区限定](https://img.shields.io/badge/作用域-工作区限定-059669?style=for-the-badge)
-![受管技能](https://img.shields.io/badge/技能-受管模式-F59E0B?style=for-the-badge)
+<p>
+  <img src="https://img.shields.io/badge/OpenClaw-Skill-0F172A?style=for-the-badge" alt="OpenClaw Skill" />
+  <img src="https://img.shields.io/badge/审核优先-2563EB?style=for-the-badge" alt="审核优先" />
+  <img src="https://img.shields.io/badge/工作区限定-059669?style=for-the-badge" alt="工作区限定" />
+  <img src="https://img.shields.io/badge/受管技能-F59E0B?style=for-the-badge" alt="受管技能" />
+</p>
 
-很多“会自我进化的 agent”演示，更强调自治；`skill-evolver` 更强调信任。
+<p>很多“会自我进化的 agent”演示，更强调自治；<code>skill-evolver</code> 更强调信任。</p>
 
-`skill-evolver` 是 TrustLoop 在 OpenClaw 上的核心 skill。
+<h3>教会 agent 一次。审查它学到的东西。最终决定权始终在你手里。</h3>
 
-它会在合适的时候识别可复用工作流，把它们沉淀成 **skill candidate**，允许用户 **审查、提修改建议、批准、拒绝、再发布**，并通过 **manual / assisted / autonomous** 三档模式控制进化速度和风险边界。
+<p><code>skill-evolver</code> 是 TrustLoop 在 OpenClaw 上的核心 skill。它会在合适的时候识别可复用工作流，把它们沉淀成 <strong>skill candidate</strong>，允许用户 <strong>审查、提修改建议、批准、拒绝、再发布</strong>，并通过 <strong>manual / assisted / autonomous</strong> 三档模式控制进化速度和风险边界。</p>
 
-这不是“让 agent 随便改自己”。
+<p>这不是“让 agent 随便改自己”，而是一套面向真实使用场景的 <strong>审核式技能进化闭环</strong>。</p>
 
-这是一个面向真实使用场景的 **审核式技能进化闭环**，并且只在低风险边界内开放更高自治。
-
-教会 agent 一次。审查它学到的东西。最终决定权始终在你手里。
+</div>
 
 ## 一眼看懂
 

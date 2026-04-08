@@ -1,27 +1,29 @@
+<div align="center">
+
 # TrustLoop
 
-[English](./README.en.md)
+<p><a href="./README.en.md">English</a></p>
 
-![OpenClaw](https://img.shields.io/badge/OpenClaw-构建于其上-0F172A?style=for-the-badge)
-![审核优先](https://img.shields.io/badge/审核优先-2563EB?style=for-the-badge)
-![人在回路中](https://img.shields.io/badge/人在回路中-059669?style=for-the-badge)
-![支持回滚](https://img.shields.io/badge/支持回滚-F59E0B?style=for-the-badge)
+<p>
+  <img src="https://img.shields.io/badge/OpenClaw-构建于其上-0F172A?style=for-the-badge" alt="OpenClaw" />
+  <img src="https://img.shields.io/badge/审核优先-2563EB?style=for-the-badge" alt="审核优先" />
+  <img src="https://img.shields.io/badge/人在回路中-059669?style=for-the-badge" alt="人在回路中" />
+  <img src="https://img.shields.io/badge/支持回滚-F59E0B?style=for-the-badge" alt="支持回滚" />
+</p>
 
-很多“会自我进化的 agent”演示，强调的是自治。
+<p>很多“会自我进化的 agent”演示，强调的是自治。TrustLoop 更强调的是信任。</p>
 
-TrustLoop 更强调的是信任。
+<h3>让 AI 持续变强，但别失去信任。</h3>
 
-让 AI 持续变强，但别失去信任。
+<p>TrustLoop 想解决的不是“agent 会不会学习”，而是“agent 越学越多之后，团队还敢不敢继续把真实工作交给它”。</p>
 
-TrustLoop 想解决的不是“agent 会不会学习”，而是“agent 越学越多之后，团队还敢不敢继续把真实工作交给它”。
+<p>它是一套面向 OpenClaw 的审核优先技能进化系统：从真实工作里识别可复用流程，把它们沉淀成可审查的 managed skill candidate，再把“批准、修订、发布、回滚”做成一条完整、可控、可解释的团队流程。</p>
 
-它是一套面向 OpenClaw 的审核优先技能进化系统：从真实工作里识别可复用流程，把它们沉淀成可审查的 managed skill candidate，再把“批准、修订、发布、回滚”做成一条完整、可控、可解释的团队流程。
+<p>你不是在给 agent 更多失控的自由，而是在给团队一套更敢长期使用 AI 的方法。</p>
 
-你不是在给 agent 更多失控的自由，而是在给团队一套更敢长期使用 AI 的方法。
+<p><strong>从真实工作中学习</strong> · <strong>每一次进化都先 review，再 publish</strong> · <strong>每一个新能力都可追踪、可回滚、可交接</strong></p>
 
-- 从真实工作中学习，而不是从概念 demo 里学习
-- 每一次进化都先 review，再 publish
-- 每一个新能力都可追踪、可回滚、可交接
+</div>
 
 ## 1 分钟快速部署
 
