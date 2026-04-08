@@ -67,6 +67,20 @@ TrustLoop 支持三种运行模式，让不同团队按自己的节奏来：
 
 关键点是，这三种模式改变的是速度，不是安全哲学。真正决定什么能自动前进的，依然是风险边界。
 
+## Skill 和 Plugin 是一起设计的
+
+TrustLoop 不是单独一个 skill，它还有一条可选的原生 plugin 路径。
+
+- 只从 ClawHub 安装 skill，它也能以 standalone 方式正常工作。
+- 从 ClawHub 安装 plugin，OpenClaw 可以一起加载它内置的 TrustLoop skill 和原生 managed-skill 工具。
+- 如果两者都在，同一套工作流仍然成立，只是 plugin 路径会让生命周期操作更安全、更稳定。
+
+这意味着用户不会被卡住：
+
+- 只装 skill，也能先产生价值
+- 再装 plugin，可以升级完整体验
+- 插件没装，不应该破坏产品承诺
+
 ## 它是怎么工作的
 
 1. 用户先在 OpenClaw 里正常完成真实任务。

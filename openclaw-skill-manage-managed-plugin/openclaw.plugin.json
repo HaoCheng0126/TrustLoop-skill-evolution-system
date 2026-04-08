@@ -1,9 +1,11 @@
 {
-  "schemaVersion": 1,
-  "name": "skill-manage-managed",
+  "id": "skill-manage-managed",
+  "name": "TrustLoop Managed Skill Tool",
   "version": "0.1.0",
-  "displayName": "TrustLoop Managed Skill Tool",
-  "description": "Adds the native managed-skill lifecycle tool for TrustLoop: candidate review, publish, rollback, and mode control inside a workspace.",
+  "description": "Adds the native managed-skill lifecycle tool for TrustLoop and bundles the core skill for plugin-backed installs.",
+  "skills": [
+    "./skills"
+  ],
   "configSchema": {
     "type": "object",
     "properties": {},

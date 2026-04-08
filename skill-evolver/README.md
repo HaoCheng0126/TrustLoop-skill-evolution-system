@@ -33,6 +33,37 @@ Teach your agent once. Review what it learns. Keep the final say.
 - Cleaner long-term skill libraries
 - Clearer risk boundaries when autonomy is enabled
 
+## Install Paths
+
+TrustLoop supports two ways to ship:
+
+### 1. Skill-only install from ClawHub
+
+Users can install `skill-evolver` directly as a skill.
+
+That path still works without the plugin:
+
+- the skill can run in pure skill mode
+- it uses built-in file tools and the bundled policy files
+- users still get the review-first workflow
+
+### 2. Plugin-backed install from ClawHub
+
+Users can also install the TrustLoop plugin package.
+
+That path is the fuller experience:
+
+- the plugin bundles the `skill-evolver` skill
+- the plugin registers the native `skill_manage_managed` tool
+- candidate review, publish, rollback, and mode changes become safer and more reliable
+
+In other words:
+
+- install the skill if you want the workflow
+- install the plugin if you want the workflow plus the native managed-skill tool
+
+The skill should never become unusable just because the plugin is missing.
+
 ## Why This Exists
 
 Most self-improving agent demos optimize for autonomy.

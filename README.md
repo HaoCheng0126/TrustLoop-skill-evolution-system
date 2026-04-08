@@ -65,6 +65,20 @@ TrustLoop supports three operating modes so different teams can choose their own
 
 The important part is that these modes change speed, not the safety philosophy. Risk boundaries still decide what is allowed to move automatically.
 
+## Skill And Plugin, Together
+
+TrustLoop is not just a skill. It is a skill plus an optional native plugin path.
+
+- Install the skill from ClawHub and it still works in standalone mode.
+- Install the plugin from ClawHub and OpenClaw can load the bundled TrustLoop skill plus the native managed-skill tool.
+- If both are present, the same workflow stays available, but the plugin-backed path handles lifecycle mutations more safely.
+
+That means users are never trapped:
+
+- skill-only install gives immediate value
+- plugin install upgrades the experience
+- missing plugin should not break the product promise
+
 ## How It Works
 
 1. A user finishes real work in OpenClaw.

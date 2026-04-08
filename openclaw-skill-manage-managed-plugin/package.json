@@ -1,7 +1,6 @@
 {
   "name": "openclaw-skill-manage-managed-plugin",
   "version": "0.1.0",
-  "private": true,
   "type": "module",
   "engines": {
     "node": ">=22"
@@ -9,7 +8,15 @@
   "openclaw": {
     "extensions": [
       "./index.js"
-    ]
+    ],
+    "compat": {
+      "pluginApi": ">=2026.2.6-3",
+      "minGatewayVersion": "2026.2.6-3"
+    },
+    "build": {
+      "openclawVersion": "2026.2.6-3",
+      "pluginSdkVersion": "2026.2.6-3"
+    }
   },
   "dependencies": {
     "@sinclair/typebox": "^0.34.8"

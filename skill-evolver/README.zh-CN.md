@@ -33,6 +33,37 @@
 - 技能库长期更清晰、更可维护
 - 开启自治时仍然有明确边界
 
+## 安装方式
+
+TrustLoop 现在支持两种分发方式：
+
+### 1. 只安装 skill
+
+用户可以直接从 ClawHub 安装 `skill-evolver`。
+
+这条路径不依赖插件，也能工作：
+
+- skill 可以走纯 skill 模式
+- 使用 OpenClaw 自带文件工具和技能目录里的规则文件
+- 仍然保留 review-first 的完整工作流
+
+### 2. 安装带原生工具的 plugin
+
+用户也可以安装 TrustLoop 的 plugin 包。
+
+这条路径会带来更完整的体验：
+
+- plugin 会把 `skill-evolver` 一起打包进去
+- plugin 会注册原生 `skill_manage_managed` 工具
+- candidate 审查、发布、回滚、模式切换会更安全、更稳定
+
+换句话说：
+
+- 想先用起来，装 skill 就够
+- 想拿到完整体验和原生工具能力，再装 plugin
+
+不应该因为插件没装，这个 skill 就不能用。
+
 ## 为什么要做这个
 
 很多“自进化 agent”的演示，更强调自动化和炫技。
