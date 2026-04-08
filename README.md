@@ -1,143 +1,173 @@
 # TrustLoop
 
-[中文说明](./README.zh-CN.md)
+[English](./README.en.md)
 
-![OpenClaw](https://img.shields.io/badge/OpenClaw-Build%20on%20Top-0F172A?style=for-the-badge)
-![Review First](https://img.shields.io/badge/Review-First-2563EB?style=for-the-badge)
-![Human in the Loop](https://img.shields.io/badge/Human-In%20the%20Loop-059669?style=for-the-badge)
-![Rollback Ready](https://img.shields.io/badge/Rollback-Ready-F59E0B?style=for-the-badge)
+![OpenClaw](https://img.shields.io/badge/OpenClaw-构建于其上-0F172A?style=for-the-badge)
+![审核优先](https://img.shields.io/badge/审核优先-2563EB?style=for-the-badge)
+![人在回路中](https://img.shields.io/badge/人在回路中-059669?style=for-the-badge)
+![支持回滚](https://img.shields.io/badge/支持回滚-F59E0B?style=for-the-badge)
 
-Most self-improving agent demos optimize for autonomy. TrustLoop optimizes for trust.
+很多“会自我进化的 agent”演示，强调的是自治。
 
-TrustLoop helps your agent get better without becoming harder to trust.
+TrustLoop 更强调的是信任。
 
-It is a review-first skill evolution system for OpenClaw. It captures useful workflows from real work, turns them into managed skill candidates, and lets your team decide what should be kept, revised, published, or rolled back inside clear workspace-only safety boundaries.
+TrustLoop 想解决的不是“agent 会不会学习”，而是“agent 越学越多之后，用户还敢不敢继续放心用它”。
 
-Teach your agent how your team works. Let it improve over time. Never give up the final say.
+它是一套面向 OpenClaw 的“审核优先”技能进化系统：从真实工作里识别可复用流程，把它们沉淀成可审查的 managed skill candidate，再让团队决定什么该保留、什么该修改、什么该发布、什么该回滚，而且所有改动都被限制在清晰的工作区安全边界内。
 
-## Why This Resonates
+教会 agent 你们团队真正有效的做法。让它持续变好。最终决定权始终留在人手里。
 
-Most teams do not reject self-improving agents because the idea is bad.
+## 1 分钟快速部署
 
-They reject them because the moment an agent starts changing itself, three fears show up immediately:
+### 推荐：plugin-first 完整安装
 
-- Will it interrupt real work?
-- Will it drift into behavior nobody approved?
-- If it learns the wrong thing, can we get back to safety fast?
+如果你想拿到最完整的 TrustLoop 体验，直接安装 plugin：
 
-TrustLoop is built for that reality.
+```bash
+openclaw plugins install clawhub:openclaw-trustloop
+```
 
-Not for flashy demos. Not for "auto-modify everything and hope for the best." For real teams that want an agent to become more useful every week without becoming less predictable.
+安装完成后：
 
-## What TrustLoop Gives You
+- plugin 会把内置的 TrustLoop skill 一起带上
+- 重启 Gateway 或重开 OpenClaw，让插件变更生效
+- 开一个新的会话，就可以开始使用
 
-- An agent that learns from proven work instead of one-off guesses
-- Fewer repeated instructions for workflows your team already uses
-- A review loop that feels collaborative, not confrontational
-- A cleaner skill library that improves through patching and merging instead of uncontrolled sprawl
-- The confidence to move faster because audit trails and rollback are already part of the system
+### 兼容模式：只安装 skill
 
-## Why People Keep Using It
+如果你只是想先快速试用 review-first 工作流，也可以只装 skill：
 
-- It respects momentum. Users do real work first, and TrustLoop learns after the task instead of interrupting the middle.
-- It respects judgment. People can approve, reject, or say "this is close, tighten the scope" without fighting the system.
-- It respects trust. New behavior begins as a candidate, stays visible, and never needs to be accepted on faith.
-- It respects real operations. Publish, backup, audit, and rollback belong to one lifecycle instead of scattered manual rituals.
+```bash
+openclaw skills install trustloop-skill-evolver
+```
 
-## The Real Difference
+这条路径适合快速体验，但如果你想拿到原生 `skill_manage_managed` 工具和更完整的能力，还是推荐安装 plugin 版本。
 
-TrustLoop is built around a simple promise:
+## 为什么这件事会打动人
 
-- trust before autonomy
-- review before publish
-- scoped change instead of silent drift
-- rollback before regret
+多数团队并不是不想要会学习的 agent。
 
-This is the middle path between "never let the agent learn" and "let it rewrite itself in the background."
+他们真正担心的是，一旦 agent 开始“自己变”，问题也会立刻出现：
 
-## Three Modes, One Safety Model
+- 会不会打断正在发生的工作？
+- 会不会慢慢漂移成没人批准过的行为？
+- 如果它学错了，能不能很快退回安全状态？
 
-TrustLoop supports three operating modes so different teams can choose their own pace:
+TrustLoop 就是为这个现实而设计的。
 
-- `manual`: creates candidates and waits for explicit human approval before publishing. Best when control matters most.
-- `assisted`: auto-approves low-risk updates, but keeps publishing manual. Best when teams want less review busywork without giving up the final gate.
-- `autonomous`: auto-publishes low-risk patches and promotes low-risk new skills more aggressively, while medium- and high-risk changes still stay in review.
+不是为了炫技演示，不是为了“先自动改了再说”，而是为了让真实团队能在不失去掌控感的前提下，放心让 agent 一周比一周更有用。
 
-The important part is that these modes change speed, not the safety philosophy. Risk boundaries still decide what is allowed to move automatically.
+## TrustLoop 真正带来的价值
 
-## Skill And Plugin, Together
+- 让 agent 学习已经被证明有效的工作流，而不是一时的猜测
+- 减少团队对同类流程的重复指令和重复返工
+- 把“学习”变成可审查、可协作的流程，而不是黑盒改动
+- 让技能库通过 patch 和 merge 持续变好，而不是越积越乱
+- 把审计和回滚提前做进系统里，让团队更敢放心提速
 
-TrustLoop is not just a skill. It is a skill plus an optional native plugin path.
+## 为什么用户会愿意长期用下去
 
-- Install the skill from ClawHub and it still works in standalone mode.
-- Install the plugin from ClawHub and OpenClaw can load the bundled TrustLoop skill plus the native managed-skill tool.
-- If both are present, the same workflow stays available, but the plugin-backed path handles lifecycle mutations more safely.
+- 它尊重工作节奏。先做真实工作，任务结束后再学习，不在中途打断用户。
+- 它尊重人的判断。用户可以批准、拒绝，或者直接说“方向对，但范围收窄一点”。
+- 它尊重信任成本。新行为先从 candidate 开始，始终可见，而不是要求用户盲目信任。
+- 它尊重真实协作。发布、备份、审计、回滚属于同一条生命周期，不是分散在各处的手工动作。
 
-That means users are never trapped:
+## 它真正不同的地方
 
-- skill-only install gives immediate value
-- plugin install upgrades the experience
-- missing plugin should not break the product promise
+TrustLoop 的核心承诺其实很简单：
 
-## How It Works
+- 先建立信任，再谈自治
+- 先审查，再发布
+- 先收边界，再放能力
+- 先支持回滚，再让用户放心尝试
 
-1. A user finishes real work in OpenClaw.
-2. TrustLoop notices a repeated or corrected workflow that is worth remembering.
-3. It creates a managed candidate instead of changing behavior immediately.
-4. The user can approve it, revise it, reject it, or publish it when ready.
-5. Published skills stay workspace-scoped, auditable, and rollback-friendly.
+它不是“完全不让 agent 学习”和“放任 agent 在后台自己改自己”之间的妥协，而是一条更适合真实团队落地的中间路线。
 
-## Repository Tour
+## 三种模式，但同一套安全原则
+
+TrustLoop 支持三种运行模式，让不同团队按自己的节奏来：
+
+- `manual`：只创建 candidate，发布前必须有人明确批准。适合最看重可控性的场景。
+- `assisted`：低风险更新可以自动批准，但发布仍然需要人工确认。适合想减少重复审查、但不想放掉最终把关的团队。
+- `autonomous`：低风险 patch 会更积极地自动发布，低风险新技能也能更快晋升，但中高风险改动仍然会留在 review 里。
+
+关键点是，这三种模式改变的是速度，不是安全哲学。真正决定什么能自动前进的，依然是风险边界。
+
+## Skill 和 Plugin 是一起设计的
+
+TrustLoop 不是单独一个 skill，它还有一条可选的原生 plugin 路径。
+
+- 只从 ClawHub 安装 skill，它也能以 standalone 方式正常工作。
+- 从 ClawHub 安装 plugin，OpenClaw 可以一起加载它内置的 TrustLoop skill 和原生 managed-skill 工具。
+- 如果两者都在，同一套工作流仍然成立，只是 plugin 路径会让生命周期操作更安全、更稳定。
+
+这意味着用户不会被卡住：
+
+- 只装 skill，也能先产生价值
+- 再装 plugin，可以升级完整体验
+- 插件没装，不应该破坏产品承诺
+
+## 它是怎么工作的
+
+1. 用户先在 OpenClaw 里正常完成真实任务。
+2. TrustLoop 发现某个流程重复出现、被纠正过，或者已经稳定到值得沉淀。
+3. 它先生成 candidate，而不是直接改写行为。
+4. 用户可以批准、提修改建议、拒绝，或者在合适的时候发布。
+5. 已发布技能仍然是工作区限定、可审计、可回滚的。
+
+## 仓库里分别是什么
 
 ### [`skill-evolver/`](./skill-evolver)
 
-The core skill and policy layer.
+这是核心 skill 和规则层。
 
-- `SKILL.md`: runtime behavior and user-facing commands
-- `README.md`: full product and UX walkthrough
-- `references/`: lifecycle, risk, and managed-tool rules
-- `templates/`: managed skill and candidate record templates
+- `SKILL.md`：运行时行为和用户可触发命令
+- `README.md` / `README.zh-CN.md`：完整产品说明和体验设计
+- `references/`：生命周期、风险边界、原生工具规则
+- `templates/`：managed skill 与 candidate 的模板
 
 ### [`openclaw-skill-manage-managed-plugin/`](./openclaw-skill-manage-managed-plugin)
 
-The companion native plugin path.
+这是配套的原生插件路径。
 
-It wraps candidate review, publish, rollback, and mode management into a narrower tool surface so the dangerous parts are more reliable and less prompt-dependent.
+它把 candidate 审查、发布、回滚、模式管理这些关键动作收口成一个更窄的工具接口，让高风险部分更可靠，也更少依赖 prompt orchestration。
 
-## Start Here
+## 建议从哪里开始看
 
-- Want the product story and user experience? Read [`skill-evolver/README.md`](./skill-evolver/README.md).
-- Want the exact behavior contract? Open [`skill-evolver/SKILL.md`](./skill-evolver/SKILL.md).
-- Want the native mutation path? Inspect [`openclaw-skill-manage-managed-plugin/src/skill-manage-managed.js`](./openclaw-skill-manage-managed-plugin/src/skill-manage-managed.js).
+- 想先理解产品价值和用户体验：看 [`skill-evolver/README.zh-CN.md`](./skill-evolver/README.zh-CN.md)
+- 想直接看技能行为约束：看 [`skill-evolver/SKILL.md`](./skill-evolver/SKILL.md)
+- 想看原生工具侧怎么落地：看 [`openclaw-skill-manage-managed-plugin/src/skill-manage-managed.js`](./openclaw-skill-manage-managed-plugin/src/skill-manage-managed.js)
 
-## Current Status
+## 当前已经具备什么
 
-TrustLoop already has the core v0 pieces:
+TrustLoop 现在已经有一套可运行的 v0 基础能力：
 
-- managed candidate creation
-- review, revision, approval, and rejection flows
-- workspace-scoped publish and rollback
-- structured audit artifacts
-- mode-aware promotion rules
-- a companion plugin skeleton for safer lifecycle mutations
+- managed candidate 创建
+- 审查、修改建议、批准、拒绝流程
+- 工作区限定的发布与回滚
+- 结构化审计记录
+- 按模式执行的晋升规则
+- 一个用于高可靠生命周期操作的配套插件骨架
 
-## Why The Name "TrustLoop"
+## 为什么我建议这个名字叫 TrustLoop
 
-The strongest idea in this project is not raw evolution. It is the loop between learning, review, and control.
+这个项目最核心的卖点，不是“它会进化”。
 
-`TrustLoop` makes that promise clear:
+而是“它会在学习、审查、控制之间形成一个可被信任的闭环”。
 
-- the system can learn
-- the user stays in the loop
-- trust is the feature, not a side effect
+`TrustLoop` 这个名字比较准确地抓住了这件事：
 
-## What To Improve Next
+- 系统可以学习
+- 用户始终在回路里
+- 信任本身就是产品特性，而不是副作用
 
-- Add end-to-end tests for publish, rollback, dedupe, and mode transitions.
-- Add a demo workspace or walkthrough artifacts so newcomers can see one full lifecycle in minutes.
-- Add a clear installation path so people can try the skill without reverse-engineering repo structure.
-- Add a small benchmark or telemetry story for "does this reduce repeated instructions over time?"
+## 接下来最值得继续优化的地方
 
-## Principle
+- 给 publish、rollback、dedupe、mode transition 补上端到端测试。
+- 做一个 demo workspace 或完整 walkthrough，让新人几分钟内看懂整条生命周期。
+- 补一份更明确的安装/接入说明，降低首次试用门槛。
+- 增加“效果证明”层，比如它是否真的减少了重复指令、提升了复用率。
 
-Let the system learn, but keep the human in control.
+## 一句话原则
+
+让系统持续学习，但始终把控制权交给用户。
